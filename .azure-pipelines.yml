@@ -6,6 +6,13 @@
     appType: 'webApp'
     WebAppName: 'azuredevopslaunch'
     packageForLinux: '$(System.DefaultWorkingDirectory)\InnovationInABox-CI\drop\s\build'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Visual Studio Enterprise Subscription – MPN (a061c61b-2189-4895-b59d-175b951dc605)'
+    appType: 'webApp'
+    WebAppName: 'azuredevopslaunch'
+    packageForLinux: '$(System.DefaultWorkingDirectory)\InnovationInABox-CI\drop\s\build'
 # Test a Django project on multiple versions of Python.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
